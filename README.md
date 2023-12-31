@@ -1,2 +1,5 @@
 # SucroseImpactProxy
-simple proxy for mhohoh games based on daddy xeon's work
+simple mihohohooh proxy
+# requires dotnet 7
+type anustihn into address.txt and run
+make it better
