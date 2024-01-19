@@ -4,7 +4,7 @@ using Titanium.Web.Proxy;
 using Titanium.Web.Proxy.EventArguments;
 using Titanium.Web.Proxy.Models;
 
-namespace SucroseImpact.Proxy;
+namespace SucroseImpactProxy;
 internal class ProxyService
 {
     string[] address = File.ReadAllLines("./address.txt");
@@ -78,9 +78,6 @@ internal class ProxyService
                 Host = local.Host,
                 Port = local.Port
             }.Uri.ToString();
-
-            replacedUrl = replacedUrl.Replace("hk4e_cn", "hk4e_global"); // cn -> global for CN builds
-            args.HttpClient.Request.Url = replacedUrl;
 
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("\nRedirecting");

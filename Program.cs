@@ -1,11 +1,13 @@
-﻿using SucroseImpact.Proxy;
+﻿using SucroseImpactProxy;
 
 Console.Title = "SucroseImpact | Proxy";
 Console.BackgroundColor = ConsoleColor.Black;
 Console.ForegroundColor = ConsoleColor.White;
 
-string[] address = File.ReadAllLines("./address.txt");
-if (String.IsNullOrEmpty(address[0]) || String.IsNullOrWhiteSpace(address[0]) || address[0].Any(Char.IsWhiteSpace)) {
+// i lvoe shitcode
+string address = File.ReadAllText("./address.txt");
+if (String.IsNullOrEmpty(address) || String.IsNullOrWhiteSpace(address) || address.Any(Char.IsWhiteSpace))
+{
     System.Environment.Exit(-1);
 }
 
