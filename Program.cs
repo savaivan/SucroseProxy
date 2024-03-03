@@ -8,7 +8,8 @@ Console.ForegroundColor = ConsoleColor.White;
 string address = File.ReadAllText("./address.txt");
 if (String.IsNullOrEmpty(address) || String.IsNullOrWhiteSpace(address) || address.Any(Char.IsWhiteSpace))
 {
-    System.Environment.Exit(-1);
+    Console.ForegroundColor = ConsoleColor.Red;
+    throw new Exception("Invalid address!");
 }
 
 ProxyService service = new();

@@ -78,8 +78,8 @@ internal class ProxyService
                 Host = local.Host,
                 Port = local.Port
             }.Uri.ToString();
-			
-			args.HttpClient.Request.Url = replacedUrl;
+            
+            args.HttpClient.Request.Url = replacedUrl;
 			
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("\nRedirecting");
