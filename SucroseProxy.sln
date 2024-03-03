@@ -1,9 +1,8 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34408.163
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SucroseImpactProxy", "SucroseImpactProxy.csproj", "{4340C35B-C4C6-48C5-8912-3A20DB34F182}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SucroseProxy", "SucroseProxy.csproj", "{4340C35B-C4C6-48C5-8912-3A20DB34F182}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

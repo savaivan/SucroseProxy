@@ -1,4 +1,4 @@
-﻿using SucroseImpactProxy;
+﻿using SucroseProxy;
 
 Console.Title = "SucroseImpact | Proxy";
 Console.BackgroundColor = ConsoleColor.Black;

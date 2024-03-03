@@ -4,7 +4,7 @@ using Titanium.Web.Proxy;
 using Titanium.Web.Proxy.EventArguments;
 using Titanium.Web.Proxy.Models;
 
-namespace SucroseImpactProxy;
+namespace SucroseProxy;
 internal class ProxyService
 {
     string[] address = File.ReadAllLines("./address.txt");
