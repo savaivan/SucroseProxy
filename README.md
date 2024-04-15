@@ -1,6 +1,6 @@
 # SucroseProxy 
 
-Simple **C#** proxy for **miHoYo**/**HoYoverse**/**COGNOSPHERE** games
+Simple **C#** proxy for **miHoYo**/**HoYoverse**/**COGNOSPHERE** and other suido s games
 
 Requires **.NET 8** to run or build\
 Depends on [Titanium.Web.Proxy](https://github.com/justcoding121/titanium-web-proxy)

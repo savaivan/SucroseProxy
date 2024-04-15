@@ -18,7 +18,13 @@ internal class ProxyService
         ".zenlesszonezero.com",
         ".honkaiimpact3.com",
         ".bhsr.com",
-        ".starrails.com"
+        ".starrails.com",
+        ".kurogame.net",
+        ".kurogame-service.com",
+        ".kurogame.com",
+        ".g3.proletariat.com",
+        ".honkaiimpact3.com",
+        ".bh3.com"
     };
 
     private readonly ProxyServer _server;
@@ -58,7 +64,9 @@ internal class ProxyService
     private Task OnCertValidation(object sender, CertificateValidationEventArgs args)
     {
         if (args.SslPolicyErrors == SslPolicyErrors.None)
+        {
             args.IsValid = true;
+        }
 
         return Task.CompletedTask;
     }
@@ -70,28 +78,14 @@ internal class ProxyService
         if (ShouldRedirect(hostname))
         {
             string requestUrl = args.HttpClient.Request.Url;
+
             Uri local = new($"http://" + address[0] + "/");
 
-            string replacedUrl = new UriBuilder(requestUrl)
-            {
-                Scheme = local.Scheme,
-                Host = local.Host,
-                Port = local.Port
-            }.Uri.ToString();
-            
+            string replacedUrl = new UriBuilder(requestUrl) { Scheme = local.Scheme, Host = local.Host, Port = local.Port }.Uri.ToString();
+
             args.HttpClient.Request.Url = replacedUrl;
-			
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("\nRedirecting");
 
-            Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine(requestUrl);
-
-            Console.ForegroundColor = ConsoleColor.Magenta;
-            Console.WriteLine("=>");
-
-            Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine(replacedUrl);
         }
 
         return Task.CompletedTask;
@@ -102,7 +96,9 @@ internal class ProxyService
         foreach (string domain in s_redirectDomains)
         {
             if (hostname.EndsWith(domain))
+            {
                 return true;
+            }
         }
 
         return false;
