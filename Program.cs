@@ -32,7 +32,7 @@ if (File.Exists("./address.txt"))
 else
 {
     StreamWriter addressfile = new StreamWriter("./address.txt");
-    addressfile.WriteLine("127.0.0.1:21000\n");
+    addressfile.WriteLine("127.0.0.1:21000");
     addressfile.Close();
     addressfile.Dispose();
 }
