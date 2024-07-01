@@ -1,6 +1,8 @@
 ﻿using SucroseProxy;
 
 Console.Title = "SucroseImpact | Proxy";
+Console.ForegroundColor = ConsoleColor.Cyan;
+Console.WriteLine("143 sucrose");
 Console.ResetColor();
 
 if (File.Exists("./address.txt"))
